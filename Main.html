@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="browser">Choose a browser:</label>
+    <select name="browser" id="browser">
+        <option value="Edge">Edge</option>
+        <option value="Chrome">Chrome</option>
+        <option value="Firefox">Firefox</option>
+        <option value="Safari">Safari</option>
+        <option value="Opera">Opera</option>
+    </select>
+    <button id="btn">Show</button>
+    <script>
+        const brwser = document.getElementById("browser");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+            const value = brwser.value;
+            if (value == "Edge") {
+                alert("You've got the Edge!");
+            } else if (value == "Chrome" || value == "Firefox" || value == "Safari" || value == "Opera") {
+                alert("Okay we support these browsers too");
+            } else {
+                alert("We hope that this page looks ok");
+            }
+        })
+    </script>
+</body>
+
+</html>

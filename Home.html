@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="radio" name="Val" id="Male" value="Male">
+    <label for="Male">Male</label>
+    <input type="radio" name="Val" id="female" value="Female">
+    <label for="Female">Female</label>
+    <input type="radio" name="Val" id="Other" value="Other">
+    <label for="Other">Other</label>
+    <button id="btn">Check</button>
+    <p id="result"></p>
+    <script>
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", () => {
+            var ele = document.getElementsByName("Val");
+            for (var i = 0; i < ele.length; i++) {
+                if (ele[i].checked) {
+                    document.getElementById("result").innerText = `You'r selected the value ${ele[i].value}`;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
